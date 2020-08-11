@@ -1,0 +1,30 @@
+.app__header {
+  background: #fff;
+  height: 54px;
+  border-bottom: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+}
+.app__header-wrapper {
+  padding: 0 30px;
+  max-width: 950px;
+  margin: auto;
+  height: inherit;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.app__header-logo {
+  object-fit: contain;
+  margin-top: 10px;
+}
+.app__header-menu {
+  padding-inline-start: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: 0;
+  list-style: none;
+}
+.app-header-menu__link:not(:first-child) {
+  margin-left: 22px;
+}
