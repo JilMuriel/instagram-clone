@@ -1,7 +1,11 @@
 .app__header {
+  top: 0px;
+  position: fixed;
+  width: 100%;
   background: #fff;
   height: 54px;
   border-bottom: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+  z-index: 100;
 }
 .app__header-wrapper {
   padding: 0 30px;
@@ -15,7 +19,7 @@
 }
 .app__header-logo {
   object-fit: contain;
-  margin-top: 10px;
+  margin-top: 10.5px;
 }
 .app__header-menu {
   padding-inline-start: 0px;
@@ -28,3 +32,52 @@
 .app-header-menu__link:not(:first-child) {
   margin-left: 22px;
 }
+
+.app__profile {
+  width: 22px;
+  height: 22px;
+}
+.app-profile__image {
+  object-fit: contain;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+}
+
+.searchbar {
+  height: 28px;
+  min-width: 125px;
+  width: 215px;
+  cursor: text;
+
+  background: #fafafa;
+  background: rgba(var(--b3f, 250, 250, 250), 1);
+  border-radius: 3px;
+  border: solid 1px #dbdbdb;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.searchbar__placeholder {
+  height: inherit;
+}
+
+/* Icons */
+/* .searchbar-cover__icon {
+  display: inline-block;
+  margin-right: 6px;
+  vertical-align: baseline;
+  background-image: url("https://www.instagram.com/static/bundles/es6/sprite_core_32f0a4f27407.png/32f0a4f27407.png");
+
+  background-repeat: no-repeat;
+  background-position: -399px -321px;
+  height: 10px;
+  width: 10px;
+}
+.searchbar-cover__placeholder {
+  color: rgba(var(--f52, 142, 142, 142), 1);
+  font-size: 14px;
+  display: inline-block;
+  max-width: 140px;
+} */

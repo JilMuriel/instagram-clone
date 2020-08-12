@@ -1,0 +1,28 @@
+.home {
+  padding-top: 54px;
+  position: relative;
+  max-width: 950px;
+  margin: auto;
+  box-sizing: border-box;
+
+  height: inherit;
+  z-index: 99;
+}
+
+.home__container {
+  box-sizing: border-box;
+  display: flex;
+}
+.content {
+  margin-top: 30px;
+  border: 1px solid black;
+  margin-right: 28px;
+  max-width: 614px;
+  width: 100%;
+}
+.sidebar {
+  margin-top: 30px;
+  border: 1px solid black;
+  max-width: 293px;
+  width: 100%;
+}

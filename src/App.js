@@ -2,17 +2,18 @@ import React from "react";
 import "./App.css";
 
 import Header from "./components/header/header";
-import Post from "./components/post/post";
+import Home from "./components/home/home";
 
 function App() {
   return (
-    <div className="app">
-      {/* HEADER */}
-      <Header />
-      {/* POST */}
-      {/* SIDENAV */}
-      <Post />
-    </div>
+    <>
+      <div className="app">
+        {/* HEADER */}
+        <Header />
+        {/* HOME */}
+        <Home />
+      </div>
+    </>
   );
 }
 
