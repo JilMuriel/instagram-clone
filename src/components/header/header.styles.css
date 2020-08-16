@@ -6,6 +6,7 @@
   height: 54px;
   border-bottom: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
   z-index: 100;
+  margin-top: 9px;
 }
 .app__header-wrapper {
   padding: 0 30px;
