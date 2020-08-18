@@ -1,0 +1,8 @@
+.page-not-found {
+  position: relative;
+  height: inherit;
+}
+.page-not-found__wrapper {
+  margin-top: 137px;
+  text-align: center;
+}
