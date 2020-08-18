@@ -85,6 +85,8 @@ export const Home = () => {
         <section className="content">
           <StoryBar />
           <Post />
+          <Post />
+          <Post />
         </section>
         <div className="sidebar">
           <div className="sidebar__profile">
