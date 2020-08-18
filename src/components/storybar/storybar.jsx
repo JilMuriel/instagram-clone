@@ -2,6 +2,59 @@ import React, { useState } from "react";
 import "./storybar.styles.css";
 import ItemsCarousel from "react-items-carousel";
 
+import StoryItem from "./storyitem/storyitem";
+
+const storyData = [
+  {
+    name: "jil",
+  },
+  {
+    name: "jil",
+  },
+  {
+    name: "jil",
+  },
+  {
+    name: "jil",
+  },
+  {
+    name: "jil",
+  },
+  {
+    name: "jil",
+  },
+  {
+    name: "jil",
+  },
+  {
+    name: "jil",
+  },
+  {
+    name: "jil",
+  },
+  {
+    name: "jil",
+  },
+  {
+    name: "jil",
+  },
+  {
+    name: "jil",
+  },
+  {
+    name: "jil",
+  },
+  {
+    name: "jil",
+  },
+  {
+    name: "jil",
+  },
+  {
+    name: "jil",
+  },
+];
+
 export const StoryBar = () => {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const chevronWidth = 40;
@@ -11,17 +64,16 @@ export const StoryBar = () => {
         <ItemsCarousel
           requestToChangeActive={setActiveItemIndex}
           activeItemIndex={activeItemIndex}
-          numberOfCards={2}
-          gutter={20}
-          leftChevron={<button>{"<"}</button>}
-          rightChevron={<button>{">"}</button>}
-          outsideChevron
+          numberOfCards={7.5}
+          leftChevron={<button className="btn">{"<"}</button>}
+          rightChevron={<button className="btn">{">"}</button>}
+          insideChevron
+          slidesToScroll={3}
           chevronWidth={chevronWidth}
         >
-          <div style={{ height: 200, background: "#EEE" }}>First card</div>
-          <div style={{ height: 200, background: "#EEE" }}>Second card</div>
-          <div style={{ height: 200, background: "#EEE" }}>Third card</div>
-          <div style={{ height: 200, background: "#EEE" }}>Fourth card</div>
+          {storyData.map((item) => (
+            <StoryItem />
+          ))}
         </ItemsCarousel>
       </div>
     </div>

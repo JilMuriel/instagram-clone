@@ -1,0 +1,33 @@
+.story-item {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  /* border: 1px solid black; */
+  width: 80px;
+  text-align: center;
+}
+.story-item__image {
+  overflow: hidden;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.story-item__image img {
+  width: 56px;
+  height: 56px;
+}
+
+.story-item__name {
+  letter-spacing: 0.01em;
+  max-width: 74px;
+  text-align: center;
+  margin: auto;
+  margin-top: 2px;
+  color: rgba(var(--i1d, 38, 38, 38), 1);
+  font-size: 12px;
+  line-height: 14px;
+
+  text-overflow: ellipsis;
+}

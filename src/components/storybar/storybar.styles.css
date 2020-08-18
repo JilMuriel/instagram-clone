@@ -11,3 +11,14 @@
 .storybar__wrapper {
   height: 84px;
 }
+.btn {
+  background: white;
+  background-position: -232px -226px;
+  border: 1px solid black;
+  overflow: hidden;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}

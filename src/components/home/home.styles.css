@@ -25,6 +25,8 @@
   /* border: 1px solid black; */
   max-width: 293px;
   width: 100%;
+  display: block;
+  position: sticky;
 }
 
 /* 
