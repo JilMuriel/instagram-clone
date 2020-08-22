@@ -1,7 +1,9 @@
 import React from "react";
 import "./inbox.styles.css";
 
-import { Link } from "react-router-dom";
+import { NavLink, Switch, Route } from "react-router-dom";
+import InboxPrimary from "./options/primary/inbox-primary";
+import InboxGeneral from "./options/general/inbox-general";
 
 const currentLink = "/direct/inbox";
 
@@ -9,129 +11,15 @@ const inboxLink = [
   {
     name: "PRIMARY",
     link: `${currentLink}/`,
+    isExact: "exact",
   },
   {
     name: "GENERAL",
     link: `${currentLink}/general`,
   },
   {
-    name: "Request",
+    name: "Request(1)",
     link: `${currentLink}/request`,
-  },
-];
-
-const userMessages = [
-  {
-    username: "jilmuriel",
-    message: "asdasdasdasdasdlkjas",
-  },
-  {
-    username: "jilmuriel",
-    message: "asdasdasdasdasdlkjas",
-  },
-  {
-    username: "jilmuriel",
-    message: "asdasdasdasdasdlkjas",
-  },
-  {
-    username: "jilmuriel",
-    message: "asdasdasdasdasdlkjas",
-  },
-  {
-    username: "jilmuriel",
-    message: "asdasdasdasdasdlkjas",
-  },
-  {
-    username: "jilmuriel",
-    message: "asdasdasdasdasdlkjas",
-  },
-  {
-    username: "jilmuriel",
-    message: "asdasdasdasdasdlkjas",
-  },
-  {
-    username: "jilmuriel",
-    message: "asdasdasdasdasdlkjas",
-  },
-  {
-    username: "jilmuriel",
-    message: "asdasdasdasdasdlkjas",
-  },
-  {
-    username: "jilmuriel",
-    message: "asdasdasdasdasdlkjas",
-  },
-  {
-    username: "jilmuriel",
-    message: "asdasdasdasdasdlkjas",
-  },
-  {
-    username: "jilmuriel",
-    message: "asdasdasdasdasdlkjas",
-  },
-  {
-    username: "jilmuriel",
-    message: "asdasdasdasdasdlkjas",
-  },
-  {
-    username: "jilmuriel",
-    message: "asdasdasdasdasdlkjas",
-  },
-  {
-    username: "jilmuriel",
-    message: "asdasdasdasdasdlkjas",
-  },
-  {
-    username: "jilmuriel",
-    message: "asdasdasdasdasdlkjas",
-  },
-  {
-    username: "jilmuriel",
-    message: "asdasdasdasdasdlkjas",
-  },
-  {
-    username: "jilmuriel",
-    message: "asdasdasdasdasdlkjas",
-  },
-  {
-    username: "jilmuriel",
-    message: "asdasdasdasdasdlkjas",
-  },
-  {
-    username: "jilmuriel",
-    message: "asdasdasdasdasdlkjas",
-  },
-  {
-    username: "jilmuriel",
-    message: "asdasdasdasdasdlkjas",
-  },
-  {
-    username: "jilmuriel",
-    message: "asdasdasdasdasdlkjas",
-  },
-  {
-    username: "jilmuriel",
-    message: "asdasdasdasdasdlkjas",
-  },
-  {
-    username: "jilmuriel",
-    message: "asdasdasdasdasdlkjas",
-  },
-  {
-    username: "jilmuriel",
-    message: "asdasdasdasdasdlkjas",
-  },
-  {
-    username: "jilmuriel",
-    message: "asdasdasdasdasdlkjas",
-  },
-  {
-    username: "jilmuriel",
-    message: "asdasdasdasdasdlkjas",
-  },
-  {
-    username: "jilmuriel",
-    message: "asdasdasdasdasdlkjas",
   },
 ];
 
@@ -162,38 +50,61 @@ export const Inbox = () => {
           <nav className="inbox-card-sidebar__nav">
             <div className="inbox-menu">
               {inboxLink.map((item) => (
-                <Link className="inbox-menu__links" to={item.link}>
+                <NavLink
+                  className="inbox-menu__links"
+                  activeClassName="inbox-menu__links-active"
+                  to={item.link}
+                  exact
+                >
                   {item.name}
-                </Link>
+                </NavLink>
               ))}
             </div>
           </nav>
           <div className="inbox-card-sidebar__body">
             <div className="inbox-card-sidebar__wrapper">
-              {userMessages.map((item) => (
-                <div className="inbox-message__item">
-                  <div className="inbox-message__image">
-                    <img src="https://instagram.fmnl4-6.fna.fbcdn.net/v/t51.2885-19/s150x150/101054364_705767389997757_2860042374791299072_n.jpg?_nc_ht=instagram.fmnl4-6.fna.fbcdn.net&_nc_ohc=xc6Z-_-_hSYAX-FtK7W&oh=9cef9c432838e6bf0c77285867e3a681&oe=5F5BF7D6" />
-                  </div>
-                  <div className="inbox-message__description">
-                    <span className="inbox-message__name">{item.username}</span>
-                    <span className="inbox-message__message">
-                      {item.message}
-                    </span>
-                  </div>
-                </div>
-              ))}
+              <Switch>
+                <Route exact path={`${currentLink}`}>
+                  <InboxPrimary />
+                </Route>
+                <Route path={`${currentLink}/general`}>
+                  <InboxGeneral />
+                </Route>
+              </Switch>
             </div>
           </div>
         </div>
         <div className="inbox-card__chatbox">
           <div className="chatbox__wrapper">
-            <span className="chatbox__image"></span>
-            <h1 className="chatbox__title">Your Messages</h1>
-            <p className="chatbox__message">
-              Send private photos and messages to a friend or group.
-            </p>
-            <button className="chatbox__button">Send Message</button>
+            <Switch>
+              <Route exact path={`${currentLink}`}>
+                <span className="chatbox__image"></span>
+                <h1 className="chatbox__title">Your Messages</h1>
+                <p className="chatbox__message">
+                  Send private photos and messages to a friend or group.
+                </p>
+                <button className="chatbox__button">Send Message</button>
+              </Route>
+              <Route path={`${currentLink}/general`}>
+                <span className="chatbox__image"></span>
+                <h1 className="chatbox__title">Your General Messages</h1>
+                <p className="chatbox__message">
+                  Notifications are off for messages you move here, but you can
+                  turn them on anytime.
+                </p>
+                <button className="chatbox__button">
+                  Go to Notifications Settings
+                </button>
+              </Route>
+              <Route path={`${currentLink}/request`}>
+                <h1 className="chatbox__title">Message Requests</h1>
+                <p className="chatbox__message">
+                  These messages are from people you've restricted or don't
+                  follow. They won't know you viewed their request until you
+                  allow them to message you.
+                </p>
+              </Route>
+            </Switch>
           </div>
         </div>
       </div>

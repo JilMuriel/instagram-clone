@@ -1,0 +1,32 @@
+.inbox-block__item {
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  /* background-color: #efefef; */
+  transition: ease-in-out 0.1s;
+}
+.inbox-img__block {
+  display: block;
+  height: 56px;
+  width: 56px;
+  background-color: #efefef;
+  background-color: rgba(var(--bb2, 239, 239, 239), 1);
+}
+.inbox-text__blank {
+  background-color: #efefef;
+  background-color: rgba(var(--bb2, 239, 239, 239), 1);
+  display: block;
+  height: 14px;
+  border-radius: 4px;
+}
+
+.inbox-text-blank__title {
+  width: 116px;
+}
+.inbox-text-blank__body {
+  width: 84px;
+}
+
+.inbox-text__blank:first-child {
+  margin-bottom: 10px;
+}
