@@ -24,12 +24,7 @@ export const ProfileCard = ({
             size === "sm" ? "profile-img__sm" : "profile-img__md"
           }`}
         >
-          <img
-            alt="jilmuriel's profile picture"
-            data-testid="user-avatar"
-            draggable="false"
-            src={profileImage}
-          />
+          <img data-testid="user-avatar" draggable="false" src={profileImage} />
         </div>
       </div>
 

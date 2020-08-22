@@ -1,0 +1,166 @@
+.inbox {
+  padding-top: 54px;
+  position: relative;
+  margin: auto;
+  box-sizing: border-box;
+  background: #fafafa;
+  height: 100vh;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+}
+
+.inbox__card {
+  display: grid;
+  grid-template-columns: 350px 1fr;
+
+  margin: 20px;
+  width: 100%;
+  max-width: 950px;
+  background: #fff;
+  border: 1px solid #dbdbdb;
+  border: 1px solid rgba(var(--b38, 219, 219, 219), 1);
+
+  border-radius: 4px;
+}
+
+.inbox-card__sidebar {
+  border-right: 1px solid #dbdbdb;
+}
+
+.inbox-card-sidebar__header {
+  padding: 0 20px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-bottom: 1px solid #dbdbdb;
+}
+.inbox-card-sidebar-header__title {
+  padding: 0 30px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  width: 100%;
+  margin: auto;
+}
+.inbox-card-sidebar-header__title span {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  min-width: 0;
+  overflow: hidden;
+}
+.inbox-card-sidebar-header__icon {
+  height: 24px;
+  width: 24px;
+  margin-left: auto;
+}
+
+.inbox-card-sidebar__nav {
+  border-bottom: 1px solid #dbdbdb;
+}
+.inbox-menu {
+  display: flex;
+  align-items: center;
+  height: 48px;
+}
+.inbox-menu__links {
+  width: inherit;
+  border: 1px solid black;
+}
+.inbox-card-sidebar__link {
+  border: 1px solid black;
+  text-align: center;
+  background: pink;
+}
+
+.inbox-card__chatbox {
+
+}
+
+/* 
+Inbox item styles */
+.inbox-card-sidebar__body {
+  padding-top: 10px;
+  height: auto;
+  overflow-y: hidden;
+}
+.inbox-card-sidebar__wrapper {
+  height: 719px;
+  overflow-y: overlay;
+  margin: auto;
+}
+.inbox-message__item {
+  cursor: pointer;
+  padding: 8px 20px;
+  display: flex;
+  align-items: center;
+  /* background-color: #efefef; */
+}
+.inbox-message__image {
+  height: 56px;
+  width: 56px;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.inbox-message__image img {
+  height: 56px;
+  width: 56px;
+}
+.inbox-message__description span {
+  font-size: 14px;
+  line-height: 18px;
+  display: block;
+}
+
+.inbox-message__message {
+  color: #8e8e8e;
+}
+
+/* Chatbox */
+.inbox-card__chatbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.chatbox__wrapper {
+  text-align: center;
+}
+.chatbox__image {
+  margin: auto;
+  display: block;
+  background-image: url("https://www.instagram.com/static/bundles/es6/sprite_glyphs_69f1eeff5ab0.png/69f1eeff5ab0.png");
+  background-repeat: no-repeat;
+  background-position: -146px -98px;
+  height: 96px;
+  width: 96px;
+}
+.chatbox__title {
+  margin-top: 32px;
+  font-size: 22px;
+  line-height: 26px;
+  font-weight: 400;
+}
+.chatbox__message {
+  margin-top: 16px;
+  margin-bottom: 32px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #8e8e8e;
+}
+.chatbox__button {
+  border: 1px solid transparent;
+  background-color: #0095f6;
+  border-radius: 4px;
+  color: #fff;
+  color: rgba(var(--eca, 255, 255, 255), 1);
+  position: relative;
+  outline: none;
+  font-weight: 600;
+  padding: 5px 9px;
+  text-overflow: ellipsis;
+  text-align: center;
+  line-height: 18px;
+  cursor: pointer;
+}

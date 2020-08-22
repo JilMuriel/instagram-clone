@@ -7,8 +7,9 @@ function App() {
   return (
     <>
       <div className="app">
-        <Header />
-        <RenderRoutes routes={ROUTES} />
+        <Header>
+          <RenderRoutes routes={ROUTES} />
+        </Header>
       </div>
     </>
   );

@@ -2,6 +2,7 @@ import React from "react";
 import { Route, Switch } from "react-router-dom";
 
 import Home from "../home/home";
+import Index from "../pages/inbox/inbox";
 import PageNotFound from "../pages/404/page-not-found";
 
 const ROUTES = [
@@ -12,9 +13,9 @@ const ROUTES = [
     component: () => <Home />,
   },
   {
-    path: "/direct/inbox/",
+    path: "/direct/inbox",
     key: "INBOX",
-    component: () => <h1>Inbox Component</h1>,
+    component: () => <Index />,
   },
   {
     path: "/explore",
