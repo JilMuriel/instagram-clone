@@ -29,6 +29,7 @@
   margin: 0;
   list-style: none;
   margin-top: 9px;
+  cursor: pointer;
 }
 .app-header-menu__link:not(:first-child) {
   margin-left: 22px;

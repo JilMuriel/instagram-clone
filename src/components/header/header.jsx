@@ -2,6 +2,7 @@ import React from "react";
 import "./header.styles.css";
 
 import { Link } from "react-router-dom";
+import Dropdown from "../dropdown/dropdown";
 
 const navbarLinks = [
   {
@@ -113,6 +114,7 @@ export const Header = ({ children }) => {
                     src="https://instagram.fmnl4-6.fna.fbcdn.net/v/t51.2885-19/s150x150/101054364_705767389997757_2860042374791299072_n.jpg?_nc_ht=instagram.fmnl4-6.fna.fbcdn.net&amp;_nc_ohc=xc6Z-_-_hSYAX-FtK7W&amp;oh=9cef9c432838e6bf0c77285867e3a681&amp;oe=5F5BF7D6"
                   />
                 </span>
+                <Dropdown />
               </li>
             </ul>
           </div>
