@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useCallback } from "react";
 import "./dropdown.styles.css";
 import { Link } from "react-router-dom";
 
@@ -57,21 +57,27 @@ const dropdownLinks = [
   },
 ];
 
-export const Dropdown = () => {
+export const Dropdown = ({ open, onClose }) => {
   return (
-    <div className="dropdown">
-      <div className="dropdown__menu">
-        {dropdownLinks.map((link) => (
-          <Link className="dropdown-menu__item" to={link.linkName}>
-            {link.icon ? (
-              <div className="dropdown-menu-item__icon">{link.icon}</div>
-            ) : null}
-            <span>{link.name}</span>
-          </Link>
-        ))}
+    <>
+      <div
+        className={`bg-drop ${open ? "isopen" : "isclose"}`}
+        onClick={onClose}
+      ></div>
+      <div className={`dropdown ${open ? "isopen" : "isclose"}`}>
+        <div className="dropdown__menu" onClick={onClose}>
+          {dropdownLinks.map((link) => (
+            <Link className="dropdown-menu__item" to={link.linkName}>
+              {link.icon ? (
+                <div className="dropdown-menu-item__icon">{link.icon}</div>
+              ) : null}
+              <span>{link.name}</span>
+            </Link>
+          ))}
+        </div>
+        <div className="point"></div>
       </div>
-      <div className="point"></div>
-    </div>
+    </>
   );
 };
 
