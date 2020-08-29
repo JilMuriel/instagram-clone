@@ -1,0 +1,108 @@
+.profile {
+  padding-top: 54px;
+  position: relative;
+  max-width: 950px;
+  margin: auto;
+  box-sizing: border-box;
+  background: #fafafa;
+  height: 100%;
+  min-height: 100vh;
+  border: 1px solid black;
+}
+.profile__header {
+  padding: 40px 0;
+  display: flex;
+  border: 1px solid black;
+}
+.profile-header__img {
+  width: 291px;
+  text-align: center;
+  margin-right: 30px;
+}
+.profile-header-img-btn {
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+}
+.profile-header-img__wrapper img {
+  border-radius: 50%;
+}
+.profile-header__info {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+  border: 1px solid black;
+}
+.profile-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.profile-header-info__username {
+  font-weight: 300;
+  font-size: 28px;
+  line-height: 32px;
+  color: #262626;
+  color: rgba(var(--i1d, 38, 38, 38), 1);
+}
+.profile-header-info__btn {
+  padding: 5px 9px;
+  margin-left: 20px;
+  height: 30px;
+  cursor: pointer;
+  outline: none;
+
+  background-color: transparent;
+  border: 1px solid #dbdbdb;
+  color: #262626;
+  border-radius: 4px;
+  position: relative;
+
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  font-weight: 600;
+
+  text-align: center;
+  text-transform: inherit;
+  text-overflow: ellipsis;
+
+  line-height: 20px;
+}
+.profile-header-info__btn-gear {
+  margin-left: 10px;
+  height: 40px;
+  text-align: center;
+  line-height: 0;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: transparent;
+}
+/* Stats */
+.profile-header__stats {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+}
+.profile-header-stats__item {
+  font-size: 16px;
+}
+.profile-header-stats__item:not(:last-child) {
+  margin-right: 40px;
+}
+
+.profile-header-stats__item span {
+  font-weight: 600;
+}
+.profile-header-description__name {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+.profile-header-description__body {
+  font-size: 16px;
+  line-height: 24px;
+}
