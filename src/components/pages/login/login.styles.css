@@ -33,7 +33,6 @@
 }
 .login__form {
   height: 100%;
-  border: 1px solid black;
 
   color: #262626;
   color: rgba(var(--i1d, 38, 38, 38), 1);
@@ -61,4 +60,157 @@
   border-radius: 1px;
   margin: 0 0 10px;
   padding: 10px 0;
+}
+/* 
+Card Header */
+.login-form__card {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  background-color: #fff;
+  background-color: rgba(var(--d87, 255, 255, 255), 1);
+  border: 1px solid #dbdbdb;
+  border: 1px solid rgba(var(--b6a, 219, 219, 219), 1);
+  border-radius: 1px;
+  margin: 0 0 10px;
+  padding: 10px 0;
+}
+.login-form-card__header {
+}
+.login-form-card__header h1 {
+  height: 51px;
+  width: 175px;
+  margin: 22px auto 12px;
+  background-repeat: no-repeat;
+  background-position: 0 -130px;
+
+  background-image: url("https://www.instagram.com/static/bundles/es6/sprite_core_32f0a4f27407.png/32f0a4f27407.png");
+
+  display: block;
+  overflow: hidden;
+  text-indent: 110%;
+  white-space: nowrap;
+}
+
+/* Form */
+.login-form-card__body {
+  margin-top: 24px;
+}
+.form-group {
+  overflow: hidden;
+  margin: 0 40px 6px;
+  border: 1px solid rgba(var(--ca6, 219, 219, 219), 1);
+  border-radius: 3px;
+}
+.form-input {
+  width: 100%;
+  /* background: #fafafa;
+  background: rgba(var(--b3f, 250, 250, 250), 1); */
+  border: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 0 auto;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  margin: 0;
+  outline: 0;
+  overflow: hidden;
+  padding: 9px 0 7px 8px;
+  text-overflow: ellipsis;
+}
+
+.form-input__label {
+  padding: 0 8px;
+  color: rgba(var(--f52, 142, 142, 142), 1);
+  font-size: 12px;
+  height: 36px;
+  line-height: 30px;
+  overflow: hidden;
+  pointer-events: none;
+  position: absolute;
+  text-overflow: ellipsis;
+  -webkit-transform-origin: left;
+  transform-origin: left;
+  -webkit-transition: -webkit-transform ease-out 0.1s;
+  transition: -webkit-transform ease-out 0.1s;
+  transition: transform ease-out 0.1s;
+  transition: transform ease-out 0.1s, -webkit-transform ease-out 0.1s;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  white-space: nowrap;
+}
+.form-btn {
+  overflow: hidden;
+  margin: 14px 40px;
+  border-radius: 3px;
+}
+.login-btn {
+  cursor: pointer;
+  padding: 5px 9px;
+  width: 100%;
+  border-radius: 4px;
+  color: #fff;
+  position: relative;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  border: 1px solid transparent;
+  background-color: #0095f6;
+  outline: none;
+}
+/* Divider */
+.login-form-card__divider {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  margin: 10px 40px 18px;
+}
+.login-divider__text {
+  color: #8e8e8e;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 15px;
+  margin: 0 18px;
+  text-transform: uppercase;
+}
+.login-divider__line {
+  height: 1px;
+  background-color: rgba(var(--b38, 219, 219, 219), 1);
+  flex-grow: 1;
+}
+
+/* Card Footer */
+.login-form-card__footer {
+  margin: 8px 40px;
+}
+.login-form-card-footer__btn {
+  color: #385185;
+  position: relative;
+  width: 100%;
+  appearance: none;
+  background: 0 0;
+  border: 0;
+  box-sizing: border-box;
+  cursor: pointer;
+  display: block;
+  font-weight: 600;
+  padding: 5px 9px;
+  text-align: center;
+  text-transform: inherit;
+  text-overflow: ellipsis;
+  user-select: none;
+  outline: none;
+}
+.login-form-card-footer-btn__icon {
+  background-image: url("https://www.instagram.com/static/bundles/es6/sprite_core_32f0a4f27407.png/32f0a4f27407.png");
+  display: inline-block;
+  margin-right: 8px;
+  position: relative;
+  top: 3px;
+  background-repeat: no-repeat;
+  background-position: -414px -259px;
+  height: 16px;
+  width: 16px;
 }
