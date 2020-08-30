@@ -68,7 +68,12 @@ export const Login = () => {
                   Log in with Facebook
                 </span>
               </button>
+              <button className="forgot-password__btn">Forgot password</button>
             </div>
+          </div>
+
+          <div className="signup-form__card">
+            <span>Don't have an account? Sign up</span>
           </div>
         </div>
       </div>
