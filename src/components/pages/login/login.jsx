@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import "./login.styles.css";
+import FormInput from "../../form-input/form-input";
 
 export const Login = () => {
+  const inputEl = useRef(null);
+  const [state, setState] = useState({
+    username: "",
+    password: "",
+  });
+  const handleChange = (e) => {
+    const { value, name } = e.target;
+    setState({ [name]: value });
+  };
   return (
     <div className="login">
       <div className="login__wrapper">
@@ -13,40 +23,21 @@ export const Login = () => {
             </div>
             <div className="login-form-card__body">
               <form>
-                <div className="form-group">
-                  <label htmlFor="">
-                    <span class="form-input__label">
-                      Phone number, username, or email
-                    </span>
-                    <input
-                      aria-label="Phone number, username, or email"
-                      aria-required="true"
-                      autocapitalize="off"
-                      autocorrect="off"
-                      maxlength="75"
-                      name="username"
-                      type="text"
-                      className="form-input"
-                      value=""
-                    />
-                  </label>
-                </div>
-                <div className="form-group">
-                  <label htmlFor="">
-                    <span class="form-input__label">Password</span>
-                    <input
-                      aria-label="Phone number, username, or email"
-                      aria-required="true"
-                      autocapitalize="off"
-                      autocorrect="off"
-                      maxlength="75"
-                      name="username"
-                      type="password"
-                      className="form-input"
-                      value=""
-                    />
-                  </label>
-                </div>
+                <FormInput
+                  label="Phone number, username, or email"
+                  type="text"
+                  onChange={handleChange}
+                  value={state.username}
+                  ref={inputEl}
+                />
+                <FormInput
+                  label="Password"
+                  type="password"
+                  onChange={handleChange}
+                  value={state.password}
+                  ref={inputEl}
+                />
+
                 <div className="form-btn">
                   <button className="login-btn" type="submit">
                     Log In
