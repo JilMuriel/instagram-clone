@@ -103,12 +103,12 @@ export const Header = ({ children }) => {
             <form action="">
               <input type="text" placeholder="Search" />
             </form>
-            {/* <div className="searchbar__placeholder">
-            <div className="searchbar-cover_form">
-              <span className="searchbar-cover__icon"></span>
-              <span className="searchbar-cover__placeholder">Search</span>
-             </div>
-          </div> */}
+            <div className="searchbar__placeholder">
+              <div className="searchbar-cover_form">
+                <span className="searchbar-cover__icon"></span>
+                <span className="searchbar-cover__placeholder">Search</span>
+              </div>
+            </div>
           </div>
           <div>
             <ul className="app__header-menu">
