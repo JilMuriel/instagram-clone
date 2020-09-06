@@ -12,13 +12,28 @@
   height: 84px;
 }
 .btn {
-  background: white;
+  background: transparent;
   background-position: -232px -226px;
-  border: 1px solid black;
-  overflow: hidden;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
+  border: transparent;
   outline: none;
   cursor: pointer;
+  padding: 0;
+  height: 45px;
+  width: 45px;
+}
+.icon {
+  display: block;
+  background-image: url("https://www.instagram.com/static/bundles/es6/sprite_glyphs_03b03cb9aafd.png/03b03cb9aafd.png");
+  background-repeat: no-repeat;
+}
+.arrow-left {
+  background-repeat: no-repeat;
+  background-position: -185px -226px;
+  height: inherit;
+  width: inherit;
+}
+.arrow-right {
+  background-position: -232px -226px;
+  height: inherit;
+  width: inherit;
 }

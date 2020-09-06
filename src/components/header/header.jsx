@@ -3,6 +3,7 @@ import "./header.styles.css";
 
 import { Link } from "react-router-dom";
 import Dropdown from "../dropdown/dropdown";
+import Searchbar from "../searchbar/searchbar";
 
 const navbarLinks = [
   {
@@ -101,14 +102,8 @@ export const Header = ({ children }) => {
           </div>
           <div className="searchbar">
             <form action="">
-              <input type="text" placeholder="Search" />
+              <Searchbar />
             </form>
-            {/* <div className="searchbar__placeholder">
-            <div className="searchbar-cover_form">
-              <span className="searchbar-cover__icon"></span>
-              <span className="searchbar-cover__placeholder">Search</span>
-             </div>
-          </div> */}
           </div>
           <div>
             <ul className="app__header-menu">

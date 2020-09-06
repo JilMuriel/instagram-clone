@@ -65,8 +65,16 @@ export const StoryBar = () => {
           requestToChangeActive={setActiveItemIndex}
           activeItemIndex={activeItemIndex}
           numberOfCards={7.5}
-          leftChevron={<button className="btn">{"<"}</button>}
-          rightChevron={<button className="btn">{">"}</button>}
+          leftChevron={
+            <button className="btn">
+              <span className="icon arrow-left"></span>
+            </button>
+          }
+          rightChevron={
+            <button className="btn">
+              <span className="icon arrow-right"></span>
+            </button>
+          }
           insideChevron
           slidesToScroll={3}
           chevronWidth={chevronWidth}
