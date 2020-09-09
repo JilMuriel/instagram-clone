@@ -2,6 +2,7 @@ import React from "react";
 import "./profile.styles.css";
 
 import ProfileStoryBar from "./profile-storybar/profile-storybar";
+import UserStoriesItem from "../../user-stories-item/user-stories-item";
 
 export const Profile = () => {
   return (
@@ -63,9 +64,10 @@ export const Profile = () => {
       </div>
       <div className="profile__stories">
         <ProfileStoryBar />
+        <UserStoriesItem />
       </div>
     </div>
-  )
+  );
 };
 
 export default Profile;

@@ -5,7 +5,8 @@ import Home from "../home/home";
 import Inbox from "../pages/inbox/inbox";
 import Profile from "../pages/profile/profile";
 import PageNotFound from "../pages/404/page-not-found";
-import Login from '../pages/login/login';
+import Login from "../pages/login/login";
+import UserStoriesItem from "../user-stories-item/user-stories-item";
 
 const ROUTES = [
   {
@@ -18,7 +19,7 @@ const ROUTES = [
     path: "/login",
     key: "LOGIN",
     exact: true,
-    component: () => <Login />
+    component: () => <Login />,
   },
   {
     path: "/direct/inbox",
@@ -34,6 +35,11 @@ const ROUTES = [
     path: "/jilmuriel",
     key: "PROFILE",
     component: () => <Profile />,
+  },
+  {
+    path: "/stories",
+    key: "STORIES",
+    component: () => <UserStoriesItem />,
   },
 ];
 

@@ -5,6 +5,7 @@ import StoryBar from "../storybar/storybar";
 import Post from "../post/post";
 import ProfileCard from "../profile-card/profile-card";
 
+
 const footerListLinks = [
   {
     title: "About",
