@@ -12,6 +12,7 @@ export const Login = () => {
     const { value, name } = e.target;
     setState({ [name]: value });
   };
+  
   return (
     <div className="login">
       <div className="login__wrapper">

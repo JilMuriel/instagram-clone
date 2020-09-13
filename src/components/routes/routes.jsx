@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Route, Switch } from "react-router-dom";
+import PrivateRoute from "./private-route";
 
 import Home from "../home/home";
 import Inbox from "../pages/inbox/inbox";
 import Profile from "../pages/profile/profile";
 import PageNotFound from "../pages/404/page-not-found";
-import Login from '../pages/login/login';
+import Login from "../pages/login/login";
+import { AuthContext } from "../../components/auth/auth";
+
+const { currentUser } = useContext(AuthContext);
+
 
 const ROUTES = [
   {
@@ -18,7 +23,7 @@ const ROUTES = [
     path: "/login",
     key: "LOGIN",
     exact: true,
-    component: () => <Login />
+    component: () => <Login />,
   },
   {
     path: "/direct/inbox",
