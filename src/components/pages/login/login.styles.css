@@ -84,7 +84,7 @@ Card Header */
   background-repeat: no-repeat;
   background-position: 0 -130px;
 
-  background-image: url("https://www.instagram.com/static/bundles/es6/sprite_core_32f0a4f27407.png/32f0a4f27407.png");
+  background-image: url("../../../assets/images/icons.png");
 
   display: block;
   overflow: hidden;
@@ -102,8 +102,6 @@ Card Header */
   border: 1px solid rgba(var(--ca6, 219, 219, 219), 1);
   border-radius: 3px;
 }
-
-
 .form-btn {
   overflow: hidden;
   margin: 14px 40px;
@@ -170,7 +168,7 @@ Card Header */
   outline: none;
 }
 .login-form-card-footer-btn__icon {
-  background-image: url("https://www.instagram.com/static/bundles/es6/sprite_core_32f0a4f27407.png/32f0a4f27407.png");
+  background-image: url("../../../assets/images/icons.png");
   display: inline-block;
   margin-right: 8px;
   position: relative;
