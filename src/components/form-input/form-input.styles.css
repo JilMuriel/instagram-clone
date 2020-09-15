@@ -23,7 +23,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 18px;
-  padding: 0 9px;
 }
 /* .font-sm {
   padding-top: 14px;
@@ -31,7 +30,7 @@
 } */
 
 .form-input__label {
-  /* border: 1px solid black; */
+  border: 1px solid black;
   color: rgba(var(--f52, 142, 142, 142), 1);
   font-size: 12px;
   line-height: 36px;
