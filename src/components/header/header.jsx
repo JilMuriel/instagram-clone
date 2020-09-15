@@ -4,6 +4,7 @@ import "./header.styles.css";
 import { Link } from "react-router-dom";
 import Dropdown from "../dropdown/dropdown";
 import Searchbar from "../searchbar/searchbar";
+import logo from "../../assets/images/instagram-logo.png";
 
 const navbarLinks = [
   {
@@ -95,10 +96,9 @@ export const Header = ({ children }) => {
       <nav className="app__header">
         <div className="app__header-wrapper">
           <div className="app__header-logo">
-            <img
-              src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
-              alt="img"
-            />
+            <Link to="/">
+              <img src={logo} alt="img" />
+            </Link>
           </div>
           <div className="searchbar">
             <form action="">
