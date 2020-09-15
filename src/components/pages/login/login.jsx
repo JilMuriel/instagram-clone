@@ -1,15 +1,22 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useCallback } from "react";
 import "./login.styles.css";
 import FormInput from "../../form-input/form-input";
 import useSignUpForm from "./sign-in-form/use-sign-in-form";
 
+import FireBaseConfig from "../../../firebase/config";
+
 export const Login = () => {
   const inputEl = useRef(null);
-  const signup = () => {
-    alert(`User Created!
-           Name: ${inputs.username}
-           Email: ${inputs.password}`);
-  };
+  const signup = useCallback(async (event) => {
+    try {
+      await FireBaseConfig.auth().createUserWithEmailAndPassword(
+        inputs.username,
+        inputs.password
+      );
+    } catch (error) {
+      console.log("signup error: ", error);
+    }
+  }, []);
   const { inputs, handleInputChange, handleSubmit } = useSignUpForm(signup);
 
   return (
