@@ -1,17 +1,17 @@
 import React, { useState, useRef } from "react";
 import "./login.styles.css";
 import FormInput from "../../form-input/form-input";
+import useSignUpForm from "./sign-in-form/use-sign-in-form";
 
 export const Login = () => {
   const inputEl = useRef(null);
-  const [state, setState] = useState({
-    username: "",
-    password: "",
-  });
-  const handleChange = (e) => {
-    const { value, name } = e.target;
-    setState({ [name]: value });
+  const signup = () => {
+    alert(`User Created!
+           Name: ${inputs.username}
+           Email: ${inputs.password}`);
   };
+  const { inputs, handleInputChange, handleSubmit } = useSignUpForm(signup);
+
   return (
     <div className="login">
       <div className="login__wrapper">
@@ -22,24 +22,27 @@ export const Login = () => {
               <h1>Instagram</h1>
             </div>
             <div className="login-form-card__body">
-              <form>
+              <form onSubmit={handleSubmit}>
                 <FormInput
                   label="Phone number, username, or email"
                   type="text"
-                  onChange={handleChange}
-                  value={state.username}
-                  ref={inputEl}
+                  name="username"
+                  onChange={handleInputChange}
+                  value={inputs.username}
                 />
                 <FormInput
-                  label="Password"
+                  label="password"
                   type="password"
-                  onChange={handleChange}
-                  value={state.password}
-                  ref={inputEl}
+                  name="password"
+                  onChange={handleInputChange}
+                  value={inputs.password}
                 />
-
                 <div className="form-btn">
-                  <button className="login-btn" type="submit">
+                  <button
+                    className="login-btn"
+                    type="submit"
+                    onClick={handleSubmit}
+                  >
                     Log In
                   </button>
                 </div>
