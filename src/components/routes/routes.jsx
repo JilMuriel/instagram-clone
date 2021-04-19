@@ -5,25 +5,41 @@ import Home from "../home/home";
 import Inbox from "../pages/inbox/inbox";
 import Profile from "../pages/profile/profile";
 import PageNotFound from "../pages/404/page-not-found";
-import Login from '../pages/login/login';
+import Login from "../pages/login/login";
+import SignUp from "../pages/sign-up/sign-up";
+import Header from "../../components/header/header";
 
 const ROUTES = [
   {
     path: "/",
     key: "ROOT",
     exact: true,
-    component: () => <Home />,
+    component: () => (
+      <Header>
+        <Home />
+      </Header>
+    ),
   },
   {
     path: "/login",
     key: "LOGIN",
     exact: true,
-    component: () => <Login />
+    component: () => <Login />,
+  },
+  {
+    path: "/sign-up",
+    key: "SIGNUP",
+    exact: true,
+    component: () => <SignUp />,
   },
   {
     path: "/direct/inbox",
     key: "INBOX",
-    component: () => <Inbox />,
+    component: () => (
+      <Header>
+        <Inbox />
+      </Header>
+    ),
   },
   {
     path: "/explore",
@@ -33,7 +49,11 @@ const ROUTES = [
   {
     path: "/jilmuriel",
     key: "PROFILE",
-    component: () => <Profile />,
+    component: () => (
+      <Header>
+        <Profile />
+      </Header>
+    ),
   },
 ];
 
