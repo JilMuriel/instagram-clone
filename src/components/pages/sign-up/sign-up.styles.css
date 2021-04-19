@@ -1,0 +1,9 @@
+.sign-up {
+  height: 100%;
+  width: 100%;
+}
+.sign-up__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
