@@ -22,7 +22,9 @@ export const Login = () => {
   return (
     <div className="login">
       <div className="login__wrapper">
-        <div className="login__slider"></div>
+        <div className="login__slider">
+          <img src="https://www.instagram.com/static/images/homepage/screenshot1.jpg/d6bf0c928b5a.jpg" />
+        </div>
         <div className="login__form">
           <div className="login-form__card">
             <div className="login-form-card__header">
