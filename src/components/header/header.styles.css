@@ -1,3 +1,4 @@
+
 .app__header {
   top: 0px;
   position: fixed;
@@ -20,6 +21,7 @@
 .app__header-logo {
   object-fit: contain;
   margin-top: 10.5px;
+  
 }
 .app__header-menu {
   padding-inline-start: 0px;
@@ -45,4 +47,3 @@
   height: 22px;
   border-radius: 50%;
 }
-

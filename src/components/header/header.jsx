@@ -97,7 +97,8 @@ export const Header = ({ children }) => {
         <div className="app__header-wrapper">
           <div className="app__header-logo">
             <Link to="/">
-              <img src={logo} alt="img" />
+              {/* <img src={logo} alt="img" /> */}
+              Jilstagram
             </Link>
           </div>
           <div className="searchbar">
