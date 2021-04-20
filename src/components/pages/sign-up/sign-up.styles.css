@@ -1,9 +1,35 @@
-.sign-up {
-  height: 100%;
-  width: 100%;
+.sign-up__card {
+  max-width: 380px;
+  box-sizing: border-box;
 }
-.sign-up__wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.sign-up--spacing {
+  margin: 0 40px 10px;
+}
+.sign-up__card h1 {
+  height: 51px;
+  width: 175px;
+  margin: 22px auto 12px;
+  background-repeat: no-repeat;
+  background-position: 0 -130px;
+  background-image: url("../../../assets/images/icons.png");
+  display: block;
+  overflow: hidden;
+  text-indent: 110%;
+  white-space: nowrap;
+}
+.sign-up--padding {
+  padding: 0 40px 10px;
+}
+
+.sign-up-btn {
+}
+.sign-up-btn__img {
+  display: block;
+  height: 16px;
+  width: 16px;
+}
+.sign-up-btn--fbicon {
+  background: url("../../../assets/images/icons.png");
+  background-repeat: no-repeat;
+  background-position: -414px -300px;
 }
