@@ -3,7 +3,7 @@ import "./login.styles.css";
 import FormInput from "../../form-input/form-input";
 import useSignUpForm from "./sign-in-form/use-sign-in-form";
 
-import FireBaseConfig from "../../../firebase/config";
+import { FireBaseConfig } from "../../../firebase/config";
 
 export const Login = () => {
   const inputEl = useRef(null);
