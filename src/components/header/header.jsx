@@ -101,7 +101,7 @@ export const Header = ({ children }) => {
               Jilstagram
             </Link>
           </div>
-          <div className="searchbar">
+          <div className="searchbar_">
             <form action="">
               <Searchbar />
             </form>
