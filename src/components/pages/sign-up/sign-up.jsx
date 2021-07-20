@@ -4,6 +4,7 @@ import { useForm } from "react-hook-form";
 // import * as yup from "yup";
 import "./sign-up.styles.css";
 
+import { FireBaseConfig } from "../../../firebase/config";
 // const schema = yup.object().shape({
 //   numberOrEmail: yup.string().required("Number or Email is a required field"),
 //   fullName: yup
@@ -48,9 +49,19 @@ export const Signup = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
-
+  // const SignUpUser = () => {
+  //   FireBaseConfig.auth()
+  //     .createUserWithEmailAndPassword("djibrilmuriel@gmail.com", "ooraiser09")
+  //     .then((res) => console.log("res", res))
+  //     .catch((error) => console.log(error));
+  // };
   const onSubmit = (data) => {
-    console.log("Register Data", data);
+    // console.log("Register Data", data);
+    // SignUpUser();
+    FireBaseConfig.auth()
+      .createUserWithEmailAndPassword(data.numberOrEmail, data.passWord)
+      .then((res) => console.log("res", res))
+      .catch((error) => console.log(error));
   };
 
   return (

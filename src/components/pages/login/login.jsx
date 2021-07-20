@@ -1,23 +1,27 @@
 import React, { useState, useRef, useCallback } from "react";
+import { useForm } from "react-hook-form";
 import "./login.styles.css";
-import FormInput from "../../form-input/form-input";
-import useSignUpForm from "./sign-in-form/use-sign-in-form";
+// import FormInput from "../../form-input/form-input";
+// import useSignUpForm from "./sign-in-form/use-sign-in-form";
 
 import { FireBaseConfig } from "../../../firebase/config";
 
 export const Login = () => {
-  const inputEl = useRef(null);
-  const signup = useCallback(async (event) => {
-    try {
-      await FireBaseConfig.auth().createUserWithEmailAndPassword(
-        inputs.username,
-        inputs.password
-      );
-    } catch (error) {
-      console.log("signup error: ", error);
-    }
-  }, []);
-  const { inputs, handleInputChange, handleSubmit } = useSignUpForm(signup);
+  // const inputEl = useRef(null);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => {
+    // console.log("Register Data", data);
+    // SignUpUser();
+    FireBaseConfig.auth()
+      .createUserWithEmailAndPassword(data.numberOrEmail, data.passWord)
+      .then((res) => console.log("res", res))
+      .catch((error) => console.log(error));
+  };
+  // const { inputs, handleInputChange, handleSubmit } = useSignUpForm(signup);
 
   return (
     <div className="login">
@@ -31,8 +35,9 @@ export const Login = () => {
               <h1>Instagram</h1>
             </div>
             <div className="login-form-card__body">
-              <form onSubmit={handleSubmit}>
-                <FormInput
+              <form onSubmit={onSubmit}>
+
+                {/* <FormInput
                   label="Phone number, username, or email"
                   type="text"
                   name="username"
@@ -45,7 +50,7 @@ export const Login = () => {
                   name="password"
                   onChange={handleInputChange}
                   value={inputs.password}
-                />
+                /> */}
                 <div className="form-btn">
                   <button
                     className="login-btn"
